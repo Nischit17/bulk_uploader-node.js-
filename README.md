@@ -30,31 +30,153 @@ The application consists of two main components:
 
 ## Features
 
-### File Upload
+The application provides a comprehensive set of features for bulk file upload, processing, and downloading.
 
-- Upload single or multiple Excel files
-- Drag and drop interface
-- Progress tracking during upload
-- Automatic data validation
-- Excel date format conversion
+### Backend Features
 
-### File Management
+1. **File Upload Processing**
 
-- View upload history with detailed information
-- Sort and filter uploaded files
-- Check processing status and results
+   - Single file upload handling
+   - Multiple file upload support (up to 10 files simultaneously)
+   - Temporary file storage management
+   - Automatic file cleanup after processing
 
-### File Download
+2. **Excel Data Processing**
 
-- Download individual files as Excel
-- Batch download multiple files as a ZIP archive
-- Seamless browser-based download experience
+   - Excel parsing (.xls and .xlsx formats)
+   - Data extraction and validation
+   - Type conversion and formatting
+   - Date format standardization
+   - Schema validation for required fields
 
-### Data Processing
+3. **Database Operations**
 
-- Automatic data extraction from Excel
-- Validation before database insertion
-- Error tracking and reporting
+   - Bulk data insertion to MySQL
+   - Transaction management for data integrity
+   - Error handling for failed inserts
+   - Performance optimization for large datasets
+
+4. **Upload History Tracking**
+
+   - Detailed upload record creation
+   - Status tracking (processing, success, failed)
+   - Error logging and categorization
+   - Processing statistics (rows processed, error counts)
+
+5. **File Download Generation**
+
+   - Dynamic Excel file generation from database data
+   - Single file download functionality
+   - Multiple file download with ZIP compression
+   - Proper HTTP headers for browser downloads
+
+6. **API Architecture**
+
+   - RESTful API design
+   - Proper error codes and responses
+   - Validation middleware
+   - Rate limiting protection
+   - CORS support for cross-origin requests
+
+7. **Error Handling**
+
+   - Comprehensive error catching
+   - Detailed error reporting
+   - Custom error middleware
+   - Graceful failure recovery
+
+8. **Security Features**
+   - File type validation
+   - File size limitations
+   - Input sanitization
+   - Error message sanitization
+
+### Frontend Features
+
+1. **Modern User Interface**
+
+   - Responsive design for all device sizes
+   - Clean and intuitive layout
+   - Consistent styling with Shadcn UI components
+   - Professionally styled with Tailwind CSS
+
+2. **File Upload Interface**
+
+   - Drag and drop file upload support
+   - Multi-file selection
+   - File type validation (.xls, .xlsx)
+   - File size validation (10MB limit)
+   - Progress tracking during upload
+   - Visual feedback during processing
+
+3. **Upload History Management**
+
+   - Tabular view of all uploads
+   - Status indicators (success, failed, processing)
+   - File details display (name, size, date)
+   - Processing results (rows processed, errors)
+   - Pagination for large history lists
+   - Sorting and filtering capabilities
+
+4. **Excel Template Management**
+
+   - Template structure display
+   - Required vs. optional field indicators
+   - Field type specifications
+   - Sample template generation and download
+   - Formatting guidelines
+
+5. **File Download Functionality**
+
+   - Individual file download buttons
+   - Multi-file selection with checkboxes
+   - Batch download as ZIP archive
+   - Download progress indicators
+   - Browser-based download handling
+
+6. **State Management**
+
+   - Centralized Redux store
+   - Typed state with TypeScript
+   - Asynchronous operations with Redux Thunks
+   - Optimistic UI updates
+   - Loading state indicators
+
+7. **Client-Side Validation**
+
+   - File type checking before upload
+   - File size validation
+   - Required field validation
+   - Error message display
+
+8. **Notification System**
+
+   - Toast notifications for actions
+   - Success confirmations
+   - Error alerts
+   - Processing status updates
+
+9. **Navigation and Routing**
+
+   - Clean URL structure
+   - App router integration
+   - Page transitions
+   - Persistent state between routes
+
+10. **Performance Optimizations**
+
+    - Client-side component architecture
+    - Lazy loading where appropriate
+    - Efficient re-rendering with React hooks
+    - Optimized API request handling
+    - Proper error boundary implementation
+
+11. **Documentation Features**
+    - In-app guidelines and instructions
+    - Excel template information
+    - Tooltips and helper text
+    - Clear error messaging
+    - User workflow guidance
 
 ## Setup and Installation
 

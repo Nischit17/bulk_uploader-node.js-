@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { AppLayout } from "@/components/layout/AppLayout";
+import { ExcelTemplateInfo } from "@/components/common/ExcelTemplateInfo";
 
 /**
  * Home page component
@@ -29,7 +30,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mb-12">
           <Card>
             <CardHeader>
               <CardTitle>Upload Files</CardTitle>
@@ -58,7 +59,9 @@ export default function Home() {
             <CardContent>
               <p className="text-gray-600">
                 View your upload history, including file details, processing
-                status, and any errors that occurred during processing.
+                status, and any errors that occurred during processing. You can
+                also download individual files or select multiple files for
+                batch download.
               </p>
             </CardContent>
             <CardFooter>
@@ -71,7 +74,12 @@ export default function Home() {
           </Card>
         </div>
 
-        <div className="mt-16 text-center">
+        {/* Excel Template Structure */}
+        <div className="w-full mb-12">
+          <ExcelTemplateInfo />
+        </div>
+
+        <div className="mt-8 text-center">
           <h2 className="text-2xl font-bold mb-4">How It Works</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             <div className="flex flex-col items-center">

@@ -2,6 +2,7 @@
 
 import { AppLayout } from "@/components/layout/AppLayout";
 import { FileUploadForm } from "@/components/forms/FileUploadForm";
+import { ExcelTemplateInfo } from "@/components/common/ExcelTemplateInfo";
 
 /**
  * Upload page component
@@ -21,7 +22,11 @@ export default function UploadPage() {
 
         <FileUploadForm />
 
-        <div className="mt-12 bg-gray-50 p-6 rounded-lg">
+        <div className="mt-12 mb-8">
+          <ExcelTemplateInfo />
+        </div>
+
+        <div className="bg-gray-50 p-6 rounded-lg mb-8">
           <h2 className="text-xl font-semibold mb-4">Upload Guidelines</h2>
           <ul className="list-disc pl-5 space-y-2 text-gray-700">
             <li>Files must be in Excel format (.xls or .xlsx)</li>
@@ -31,6 +36,9 @@ export default function UploadPage() {
             </li>
             <li>The system will validate the data and report any errors</li>
             <li>You can upload multiple files at once</li>
+            <li>
+              After uploading, you can download your files from the history page
+            </li>
           </ul>
         </div>
       </div>
